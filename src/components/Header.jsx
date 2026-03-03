@@ -1,11 +1,9 @@
 import { HeaderStyled } from "../styles/Header.styled";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSun, faMoon } from "@fortawesome/free-solid-svg-icons";
-import { Link, useLocation } from "react-router-dom";
+import { Link} from "react-router-dom";
 
-function Header() {
-  const location = useLocation();
-  const isHome = location.pathname === "/home";
+function Header({isHome, scrollTo}) {
 
   return (
     <HeaderStyled className="header">
@@ -16,14 +14,20 @@ function Header() {
       </div>
 
       <nav className="navbar">
-        <ul className="nav-list closed">
+        <ul className="nav-list">
           <li>
-            <Link to={isHome ? "/contact" : "/home"}>
-              {isHome ? "Contact" : "Home"}
-            </Link>
+            {isHome ? (
+              <a onClick={() => scrollTo("contact")}>Contact</a>
+            ) : (
+              <Link to="/home">Home</Link>
+            )}
           </li>
           <li>
-            <Link to={isHome ? "/projects" : "#projects"}>Projects</Link>
+            {isHome ? (
+              <Link to="/projects">Projects</Link>
+            ) : (
+              <a onClick={() => scrollTo("projects")}>Projects</a>
+            )}
           </li>
         </ul>
       </nav>

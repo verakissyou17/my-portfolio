@@ -1,10 +1,15 @@
-import Header from "../components/Header"
+import Header from "../components/Header";
+import HomeMain from "../components/HomeMain";
+import Footer from "../components/Footer";
 
-function Home() {
+function Home({isHome, scrollTo}) {
   return (
-    <div>
-      <Header />
-    </div>
+    <>
+    <title>Home</title>
+      <Header isHome={isHome} scrollTo={scrollTo} />
+      <HomeMain />
+      <Footer />
+    </>
   )
 }
 

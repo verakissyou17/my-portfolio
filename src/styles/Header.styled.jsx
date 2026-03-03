@@ -1,15 +1,15 @@
 import styled from "styled-components";
 
 export const HeaderStyled = styled.header`
-  grid-column: 1 / 2;
-  grid-row: 1 / 2;
   position: sticky;
   top: 0;
+  right: 0;
+  left: 0;
   z-index: 3;
   display: flex;
   align-items: center;
   gap: 2rem;
-  padding: 1em;
+  padding: 1rem;
   background-color: var(--white);
   transition: background-color 0.5s ease-in;
 
