@@ -5,7 +5,7 @@ export const HeaderStyled = styled.header`
   top: 0;
   right: 0;
   left: 0;
-  z-index: 3;
+  z-index: 10;
   display: flex;
   align-items: center;
   gap: 2rem;
@@ -13,75 +13,96 @@ export const HeaderStyled = styled.header`
   background-color: var(--white);
   transition: background-color 0.5s ease-in;
 
-  .header.dark-mode {
+  body.dark-mode & {
     background-color: var(--dark-gray);
   }
 
   .hamburger {
-    width: 2rem;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
+    position: relative;
+    width: 30px;
+    height: 22px;
+    cursor: pointer;
+
+    & .bar {
+      position: absolute;
+      left: 0;
+      width: 100%;
+      height: 3px;
+      background: var(--teal-dark);
+      transition: all 0.3s ease;
+
+      body.dark-mode & {
+        background-color: var(--teal-light);
+      }
+    }
+
+    .bar:nth-child(1) {
+      top: 0;
+    }
+
+    .bar:nth-child(2) {
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    .bar:nth-child(3) {
+      bottom: 0;
+    }
   }
 
-  .bar {
-    width: 100%;
-    height: 0.3em;
-    margin: 0.2em 0;
-    background-color: var(--teal-dark);
-    transition: transform 1s ease;
-  }
-
-  .hamburger.closed .bar:first-child {
-    transform-origin: right top;
-    transform: rotate(-50deg);
-  }
-
-  .hamburger.closed .bar:last-child {
-    transform-origin: right bottom;
-    transform: rotate(50deg);
+  .hamburger.closed .bar:nth-child(1) {
+    top: 50%;
+    transform: translateY(-50%) rotate(45deg);
   }
 
   .hamburger.closed .bar:nth-child(2) {
-    transform-origin: right center;
-    transform: translateX(-100px);
+    opacity: 0;
   }
 
-  .nav-list {
-    list-style: none;
-    text-transform: uppercase;
-    display: flex;
-    align-items: center;
-    gap: 1rem;
+  .hamburger.closed .bar:nth-child(3) {
+    top: 50%;
+    transform: translateY(-50%) rotate(-45deg);
   }
 
-  .nav-list.closed {
+  .navbar {
+    .nav-list {
+      list-style: none;
+      text-transform: uppercase;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+
+      & li a {
+        background: linear-gradient(
+          145deg,
+          var(--light-grey),
+          var(--teal-dark)
+        );
+        color: var(--white);
+        padding: 0 0.5em;
+        font-family: inherit;
+        font-weight: 500;
+        font-size: 1rem;
+        text-decoration: none;
+        border: none;
+        outline: none;
+        border-radius: 0.25em;
+        cursor: pointer;
+
+        body.dark-mode & {
+          background: linear-gradient(
+            45deg,
+            var(--dark-gray) 0%,
+            var(--dark-lilac) 95%
+          );
+          color: var(--teal-light);
+        }
+      }
+    }
+  }
+
+  .navbar.hidden {
     display: none;
-  }
-
-  .nav-list li a {
-    background: linear-gradient(145deg, var(--light-grey), var(--teal-dark));
-    color: var(--white);
-    padding: 0 0.5em;
-    font-family: inherit;
-    font-weight: 500;
-    font-size: 1rem;
-    text-decoration: none;
-    border: none;
-    outline: none;
-    border-radius: 0.25em;
-    cursor: pointer;
-  }
-
-  .nav-list li a.dark-mode {
-    background: linear-gradient(
-      45deg,
-      var(--dark-gray) 0%,
-      var(--dark-lilac) 95%
-    );
-    color: var(--teal-light);
   }
 
   .toggle-btn {
@@ -97,34 +118,34 @@ export const HeaderStyled = styled.header`
     cursor: pointer;
     position: relative;
     transition: all 0.3s ease;
-  }
 
-  .toggle-btn.dark-mode {
-    border: 2px solid var(--teal-light);
-  }
+    body.dark-mode & {
+      border: 2px solid var(--teal-light);
+    }
 
-  .ball {
-    position: absolute;
-    width: 50%;
-    height: 1.5rem;
-    inset: -2px 0 2px 0;
-    border-radius: 1.5rem;
-    background-color: var(--teal-dark);
-    transition: transform 0.3s linear;
-  }
+    .ball {
+      position: absolute;
+      width: 50%;
+      height: 1.5rem;
+      inset: -2px 0 2px 0;
+      border-radius: 1.5rem;
+      background-color: var(--teal-dark);
+      transition: transform 0.3s linear;
 
-  .ball.dark-mode {
-    transform: translateX(100%);
-    background-color: var(--white);
-  }
+      body.dark-mode & {
+        transform: translateX(100%);
+        background-color: var(--white);
+      }
+    }
 
-  .fa-moon {
-    color: var(--dark-gray);
-    font-size: 1rem;
-  }
+    .icon-sun {
+      color: var(--yellow);
+      font-size: 1rem;
+    }
 
-  .fa-sun {
-    color: var(--yellow);
-    font-size: 1rem;
+    .icon-moon {
+      color: var(--dark-gray);
+      font-size: 1rem;
+    }
   }
 `;

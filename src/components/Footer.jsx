@@ -20,7 +20,7 @@ function Footer({isHome}) {
           aria-label="WhatsApp"
           title="WhatsApp"
         >
-          <FontAwesomeIcon icon={faWhatsapp} />
+          <FontAwesomeIcon icon={faWhatsapp} className="icon" />
         </Link>
         <Link
           to="https://github.com/Verakissyou17"
@@ -29,7 +29,7 @@ function Footer({isHome}) {
           aria-label="GitHub"
           title="GitHub"
         >
-          <FontAwesomeIcon icon={faGithub} />
+          <FontAwesomeIcon icon={faGithub} className="icon" />
         </Link>
         <Link
           to="https://www.linkedin.com/in/verakissyou17/"
@@ -38,10 +38,10 @@ function Footer({isHome}) {
           aria-label="LinkedIn"
           title="LinkedIn"
         >
-          <FontAwesomeIcon icon={faLinkedin} />
+          <FontAwesomeIcon icon={faLinkedin} className="icon" />
         </Link>
       </nav>
-      <div>@Copyright{year}.<br></br>Made with love by <Link id={isHome ? "home" : "projects" } to={"https://github.com/verakissyou17"} target="_blank">Vera💞</Link></div>
+      <div>.Made with love by <Link id={isHome ? "home" : "projects" } to={"https://github.com/verakissyou17"} target="_blank">Vera 💞</Link> @Copyright{year}</div>
     </FooterStyled>
   );
 }

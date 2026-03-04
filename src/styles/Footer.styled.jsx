@@ -1,20 +1,25 @@
 import styled from "styled-components";
 
 export const FooterStyled = styled.footer`
-  /* width: 100%;
-  max-width: 300px;
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: space-between; */
+  justify-content: space-between;
   padding: 1rem;
 
   a {
-    align-self: center;
     text-decoration: none;
+    color: var(--light-blue);
+  }
+
+  .footer-nav {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
   }
 
   .icon {
-    font-size: 3rem;
+    font-size: 2rem;
     color: var(--light-blue);
     padding: 0.25rem;
   }
@@ -28,24 +33,5 @@ export const FooterStyled = styled.footer`
 
   .icons:is(:focus) {
     color: var(--light-grey);
-  }
-
-
-
-  .skills {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    width: 100%;
-    max-width: 450px;
-  }
-
-  .subtitle {
-    color: var(--teal-dark);
-    font-weight: bold;
-  }
-
-  .subtitle.dark-mode {
-    color: var(--teal-light);
   }
 `;

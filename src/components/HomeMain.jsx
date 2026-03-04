@@ -23,7 +23,7 @@ function HomeMain() {
           />
         </div>
         <section className="about-me__text">
-          <h2 className="subtitle">
+          <h2 className="about_me-subtitle">
             I am a self-taught junior web developer, passionate about technology
             and web design.
           </h2>
@@ -33,25 +33,25 @@ function HomeMain() {
           </p>
         </section>
         <section className="skills">
-          <h2 className="subtitle">Skills</h2>
+          <h3 className="skills-subtitle">Skills</h3>
           <ol className="skills-list">
             <li>
-              <FontAwesomeIcon icon={faHtml5} />
+              <FontAwesomeIcon icon={faHtml5} className="icon" />
             </li>
             <li>
-              <FontAwesomeIcon icon={faCss3} />
+              <FontAwesomeIcon icon={faCss3} className="icon" />
             </li>
             <li>
-              <FontAwesomeIcon icon={faJs} />
+              <FontAwesomeIcon icon={faJs} className="icon" />
             </li>
             <li>
-              <FontAwesomeIcon icon={faSass} />
+              <FontAwesomeIcon icon={faSass} className="icon" />
             </li>
             <li>
-              <FontAwesomeIcon icon={faReact} />
+              <FontAwesomeIcon icon={faReact} className="icon" />
             </li>
             <li>
-              <FontAwesomeIcon icon={faGit} />
+              <FontAwesomeIcon icon={faGit} className="icon" />
             </li>
           </ol>
         </section>
