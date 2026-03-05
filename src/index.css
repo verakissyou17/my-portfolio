@@ -1,17 +1,17 @@
 :root {
-  --light-pink: #f0e3ed;
-  --white: rgb(255, 255, 255);
-  --black: #000;
+  --light-pink: hsl(314, 30%, 92%);
+  --white: hsl(0, 0%, 100%);
+  --black: hsl(0, 0%, 0%);
   --dark-lilac: #a07297;
   --dark-gray: hsl(60, 1%, 26%);
   --light-grey: hsl(0, 0%, 66%);
   --pink: hsl(338, 70%, 55%);
   --teal-dark: hsl(183, 94%, 21%);
   --teal-light: hsl(183, 70%, 62%);
-  --yellow: yellow;
+  --yellow: hsl(60, 100%, 50%);
   --purple: hsl(290, 94%, 37%);
-  --light-blue: #03c8d6;
-  --magenta: #ff27db;
+  --light-blue: hsl(184, 97%, 43%);
+  --magenta: hsl(310, 100%, 58%);
   --orange: hsl(34, 93%, 61%);
 }
 
@@ -29,7 +29,7 @@ body {
   justify-content: center;
   min-height: 100vh;
   font-family: "Mooli", sans-serif;
-  background-color: var(--white);
+  background-color: var(--light-grey);
   transition:
     background-color 0.5s ease,
     color 0.5s ease;
