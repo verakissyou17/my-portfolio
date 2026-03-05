@@ -6,7 +6,7 @@
   --dark-gray: hsl(60, 1%, 26%);
   --light-grey: hsl(0, 0%, 66%);
   --pink: hsl(338, 70%, 55%);
-  --teal-dark: rgb(3, 98, 103);
+  --teal-dark: hsl(183, 94%, 21%);
   --teal-light: hsl(183, 70%, 62%);
   --yellow: yellow;
   --purple: hsl(290, 94%, 37%);
@@ -26,7 +26,6 @@
 body {
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
   min-height: 100vh;
   font-family: "Mooli", sans-serif;

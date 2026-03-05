@@ -7,23 +7,19 @@ import { useLocation } from "react-router-dom";
 
 function App() {
   const location = useLocation();
-  const isHome = location.pathname === "/home";
+  const isHome = location.pathname === "/";
 
   const scrollTo = (id) => {
     const section = document.getElementById(id);
     section?.scrollIntoView({ behavior: "smooth" });
   };
 
-  
+
   return (
     <>
     <Header isHome={isHome} scrollTo={scrollTo} />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route
-          path="/home"
-          element={<Home />}
-        />
         <Route
           path="/projects"
           element={<Projects />}

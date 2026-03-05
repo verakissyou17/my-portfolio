@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const FormStyled = styled.form`
+export const FormStyled = styled.div`
   .projects {
     margin-bottom: 2rem;
 
@@ -38,7 +38,7 @@ export const FormStyled = styled.form`
     position: relative;
     width: 100%;
     max-width: 400px;
-    height: 21rem;
+    min-height: ${({ $message }) => ($message ? "24rem" : "21rem")};
     border-radius: 1rem;
     overflow: hidden;
     z-index: 1;
@@ -189,25 +189,23 @@ export const FormStyled = styled.form`
       font-weight: 500;
       cursor: pointer;
     }
+
+    .message {
+      display: block;
+      margin-block: 1rem;
+      text-align: center;
+      color: var(--teal-dark);
+      font-weight: bold;
+    }
+
+    .closed {
+      display: none;
+    }
   }
 
-  /*
-
-  input[type="submit"]:hover {
-    box-shadow:
-      2px 2px 3px var(--light-blue),
-      -2px -2px 3px var(--light-blue);
+  @media (min-width: 48em) {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 3rem;
   }
-
-  input[type="submit"]:active {
-    opacity: 0.8;
-  }
-
-  .message {
-    text-align: center;
-    color: var(--light-blue);
-    margin-top: 1rem;
-    font-size: 1.1rem;
-    font-weight: 500;
-  } */
 `;

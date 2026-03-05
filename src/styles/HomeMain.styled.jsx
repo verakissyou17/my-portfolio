@@ -5,6 +5,8 @@ export const HomeMainStyled = styled.main`
   flex-direction: column;
   gap: 5rem;
   padding: 1rem;
+  max-width: 70%;
+  margin: 0 auto;
 
   .about-me {
     flex-grow: 1;
@@ -36,39 +38,45 @@ export const HomeMainStyled = styled.main`
       }
     }
 
-    .about-me__image {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin-block: 2rem;
-
-      .profile-image {
-        border-radius: 50%;
-        max-width: 35%;
-        box-shadow: 5px 5px 5px hsla(0, 0%, 0%, 0.3);
-      }
-    }
-
     .about-me__text {
-      text-align: justify;
+      padding: 1rem;
       margin-block: 2rem;
+      box-shadow:
+        2px 2px 5px hsla(183, 70%, 61%, 0.3),
+        -2px -2px 5px hsla(183, 70%, 61%, 0.3);
 
       body.dark-mode & {
         color: var(--white);
       }
+    }
 
+    .text-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 2rem;
+      padding: 1.5rem;
       p {
         font-style: italic;
-        margin-top: 1rem;
         line-height: 1.5;
+      }
+      .about-me__image {
+        .profile-image {
+          border-radius: 50%;
+          box-shadow: 5px 5px 5px hsla(0, 0%, 0%, 0.3);
+        }
       }
     }
   }
 
   .skills {
-
+    margin-block: 2rem;
+    padding: 2rem;
+    box-shadow:
+      2px 2px 5px hsla(183, 70%, 61%, 0.3),
+      -2px -2px 5px hsla(183, 70%, 61%, 0.3);
     .skills-subtitle {
-      margin-bottom: 1rem;
+      margin-bottom: 1.5rem;
     }
 
     .skills-list {
@@ -85,7 +93,7 @@ export const HomeMainStyled = styled.main`
         padding: 0.5rem;
         background-color: var(--light-grey);
         border-radius: 0.25rem;
-        box-shadow: 2px 2px 4px  var(--teal-dark);
+        box-shadow: 2px 2px 4px var(--teal-dark);
 
         body.dark-mode & {
           background-color: var(--white);
@@ -120,6 +128,21 @@ export const HomeMainStyled = styled.main`
       li:nth-child(6) .icon {
         color: orange;
       }
+    }
+  }
+
+  @media (min-width: 48em) {
+    .about-me {
+      .text-container {
+        flex-direction: row;
+
+        .about-me__image {
+          max-width: 5rem;
+        }
+      }
+    }
+    .skills-subtitle {
+      text-align: center;
     }
   }
 `;

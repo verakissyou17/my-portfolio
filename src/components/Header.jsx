@@ -15,8 +15,6 @@ function Header({isHome, scrollTo}) {
     navbar.classList.toggle("hidden");
   }
 
-  console.log(isHome);
-
   return (
     <HeaderStyled className="header">
       <div className="hamburger" onClick={toggleNavbar}>
@@ -31,7 +29,7 @@ function Header({isHome, scrollTo}) {
             {isHome ? (
               <a onClick={() => scrollTo("contact")}>Contact</a>
             ) : (
-              <Link to="/home">Home</Link>
+              <Link to="/">Home</Link>
             )}
           </li>
           <li>
