@@ -91,7 +91,7 @@ export const HomeMainStyled = styled.main`
         font-size: 2.5rem;
         font-weight: bold;
         padding: 0.5rem;
-        background-color: var(--light-grey);
+        background-color: var(--white);
         border-radius: 0.25rem;
         box-shadow: 2px 2px 4px var(--teal-dark);
 

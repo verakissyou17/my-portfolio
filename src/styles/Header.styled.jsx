@@ -10,7 +10,7 @@ export const HeaderStyled = styled.header`
   align-items: center;
   gap: 2rem;
   padding: 1rem;
-  background-color: var(--white);
+  background-color: transparent;
   transition: background-color 0.5s ease-in;
 
   body.dark-mode & {
