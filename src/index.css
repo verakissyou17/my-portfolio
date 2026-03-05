@@ -13,6 +13,7 @@
   --light-blue: hsl(184, 97%, 43%);
   --magenta: hsl(310, 100%, 58%);
   --orange: hsl(34, 93%, 61%);
+  --teal-dark-alpha: hsla(183, 94%, 21%, 0.75);
 }
 
 *,

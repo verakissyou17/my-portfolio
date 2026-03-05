@@ -42,11 +42,14 @@ export const HomeMainStyled = styled.main`
       padding: 1rem;
       margin-block: 2rem;
       box-shadow:
-        2px 2px 5px hsla(183, 70%, 61%, 0.3),
-        -2px -2px 5px hsla(183, 70%, 61%, 0.3);
+        2px 2px 5px var(--teal-dark-alpha),
+        -2px -2px 5px var(--teal-dark-alpha);
 
       body.dark-mode & {
         color: var(--white);
+              box-shadow:
+        2px 2px 5px var(--light-blue),
+        -2px -2px 5px var(--light-blue);
       }
     }
 
@@ -73,8 +76,14 @@ export const HomeMainStyled = styled.main`
     margin-block: 2rem;
     padding: 2rem;
     box-shadow:
-      2px 2px 5px hsla(183, 70%, 61%, 0.3),
-      -2px -2px 5px hsla(183, 70%, 61%, 0.3);
+      2px 2px 5px var(--teal-dark-alpha),
+      -2px -2px 5px var(--teal-dark-alpha);
+
+      body.dark-mode & {
+              box-shadow:
+        2px 2px 5px var(--light-blue),
+        -2px -2px 5px var(--light-blue);
+      }
     .skills-subtitle {
       margin-bottom: 1.5rem;
     }
