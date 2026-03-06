@@ -9,14 +9,8 @@ export const HeaderStyled = styled.header`
   display: flex;
   align-items: center;
   gap: 2rem;
-  padding: 1rem;
-  background-color: transparent;
-  transition: background-color 0.5s ease-in;
-
-  body.dark-mode & {
-    background-color: var(--dark-gray);
-  }
-
+  padding: 2rem;
+  
   .hamburger {
     position: relative;
     width: 30px;

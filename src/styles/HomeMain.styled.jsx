@@ -4,8 +4,8 @@ export const HomeMainStyled = styled.main`
   display: flex;
   flex-direction: column;
   gap: 5rem;
-  padding: 1rem;
-  max-width: 70%;
+  padding: 2rem;
+  max-width: 80%;
   margin: 0 auto;
 
   .about-me {
@@ -28,8 +28,11 @@ export const HomeMainStyled = styled.main`
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       animation: textclip 5s linear infinite;
-      transition: all 5s ease;
       text-align: center;
+      margin: 5rem auto;
+      opacity: 0;
+      transform: translateX(-100px);
+      transition: all 5s ease;
     }
 
     @keyframes textclip {
@@ -38,19 +41,65 @@ export const HomeMainStyled = styled.main`
       }
     }
 
+    .title.visible {
+      opacity: 1;
+      transform: translateX(0);
+    }
+
+    .hero {
+      width: 100%;
+      min-height: 60vh;
+      border-radius: 6rem 1.2rem;
+      background: url("./images/programming-languages.webp");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      position: relative;
+      margin: 5rem auto;
+
+      body.dark-mode & {
+        background: url("./images/dark-background.webp");
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      inset: 2px -2px -2px 2px;
+      border-radius: 6rem 1.2rem;
+      transform: translate(5px, -5px);
+      box-shadow:
+        2px 2px 15px var(--light-blue),
+        -2px -2px 15px var(--yellow),
+        2px -2px 15px var(--teal-dark),
+        -2px 2px 15px var(--magenta);
+      z-index: -1;
+      filter: blur(2px);
+    }
+
     .about-me__text {
       padding: 1rem;
-      margin-block: 2rem;
+      margin: 5rem auto;
       box-shadow:
         2px 2px 5px var(--teal-dark-alpha),
         -2px -2px 5px var(--teal-dark-alpha);
+      opacity: 0;
+      transform: translateX(100px);
+      transition: all 2s ease-in-out;
 
       body.dark-mode & {
         color: var(--white);
-              box-shadow:
-        2px 2px 5px var(--light-blue),
-        -2px -2px 5px var(--light-blue);
+        box-shadow:
+          2px 2px 5px var(--light-blue),
+          -2px -2px 5px var(--light-blue);
       }
+    }
+
+    .about-me__text.visible {
+      opacity: 1;
+      transform: translateX(0);
     }
 
     .text-container {
@@ -67,32 +116,39 @@ export const HomeMainStyled = styled.main`
         .profile-image {
           border-radius: 50%;
           box-shadow: 5px 5px 5px hsla(0, 0%, 0%, 0.3);
+          max-width: 6rem;
         }
       }
     }
   }
 
   .skills {
-    margin-block: 2rem;
+    max-width: 100%;
+    margin: 10rem auto;
     padding: 2rem;
     box-shadow:
       2px 2px 5px var(--teal-dark-alpha),
       -2px -2px 5px var(--teal-dark-alpha);
+    opacity: 0;
+    transform: translateX(-50px);
+    transition: all 2s ease-in-out;
 
-      body.dark-mode & {
-              box-shadow:
+    body.dark-mode & {
+      box-shadow:
         2px 2px 5px var(--light-blue),
         -2px -2px 5px var(--light-blue);
-      }
+      color: var(--white);
+    }
     .skills-subtitle {
       margin-bottom: 1.5rem;
+      text-align: center;
     }
 
     .skills-list {
       list-style: none;
       display: flex;
       align-items: center;
-      justify-content: center;
+      justify-content: space-around;
       flex-wrap: wrap;
       gap: 1rem;
 
@@ -112,6 +168,7 @@ export const HomeMainStyled = styled.main`
       li .icon:hover {
         transform: scale(1.2);
         transition: transform 0.5s ease;
+        cursor: pointer;
       }
 
       li:nth-child(1) .icon {
@@ -140,18 +197,36 @@ export const HomeMainStyled = styled.main`
     }
   }
 
+  .skills.visible {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
   @media (min-width: 48em) {
     .about-me {
-      .text-container {
-        flex-direction: row;
+      .title {
+        transform: translateX(-1000px);
+      }
 
-        .about-me__image {
-          max-width: 5rem;
+      .about-me__text {
+        transform: translateX(500px);
+
+        .text-container {
+          flex-direction: row;
+
+          .about-me__image {
+            max-width: 5rem;
+          }
         }
       }
     }
-    .skills-subtitle {
-      text-align: center;
+
+    .skills {
+      transform: translateX(-500px);
+
+      .skills-subtitle {
+        text-align: center;
+      }
     }
   }
 `;

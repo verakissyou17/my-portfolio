@@ -66,7 +66,7 @@ export const projects = [
   {
     id: 9,
     title: "Assembly: Endgame",
-    url: "https://verakissyou17.github.io/mortgage-repayment-calculator-main/",
+    url: "https://verakissyou17.github.io/capstone-endgame/",
     description:"Completed Scrimba's React course with Bob Ziroll and built the capstone project 'Assembly: Endgame', a word-guessing game practicing React components, state, and event handling.",
     img: "./images/screenshots/capstone-endgame.webp",
   },

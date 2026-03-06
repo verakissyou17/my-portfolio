@@ -29,8 +29,10 @@ export const FormStyled = styled.div`
     }
 
     .projects-list option {
-      background-color: var(--light-blue);
-      color: var(--black);
+      background-color: transparent;
+      color: var(--teal-dark);
+      border: none;
+      outline: none;
     }
   }
 
@@ -206,6 +208,7 @@ export const FormStyled = styled.div`
   @media (min-width: 48em) {
     display: flex;
     justify-content: space-evenly;
-    padding: 3rem;
+    gap: 2rem;
+    padding: 2rem;
   }
 `;

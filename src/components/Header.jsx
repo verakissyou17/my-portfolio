@@ -3,10 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSun, faMoon } from "@fortawesome/free-solid-svg-icons";
 import { Link} from "react-router-dom";
 
-function Header({isHome, scrollTo}) {
-    const toggleTheme = () => {
-    document.body.classList.toggle("dark-mode");
-  };
+function Header({isHome, scrollTo, toggleTheme}) {
 
   const toggleNavbar = () => {
     const hamburger = document.querySelector('.hamburger');

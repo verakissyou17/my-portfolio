@@ -1,5 +1,6 @@
 :root {
   --light-pink: hsl(314, 30%, 92%);
+  --light-pink-alpha: hsla(314, 32%, 92%, 0.748);
   --white: hsl(0, 0%, 100%);
   --black: hsl(0, 0%, 0%);
   --dark-lilac: #a07297;
@@ -30,18 +31,16 @@ body {
   justify-content: center;
   min-height: 100vh;
   font-family: "Mooli", sans-serif;
-  background-color: var(--light-grey);
-  transition:
-    background-color 0.5s ease,
-    color 0.5s ease;
+  background: linear-gradient(180deg, #f7f1f9 0%, #eef1ff 40%, #ffffff 100%);
 }
+
 
 body.dark-mode {
-  background-color: var(--dark-gray);
-  color: var(--white);
+  background: linear-gradient(180deg, #0f0f14 0%, #151520 40%, #0f0f14 100%);
 }
 
-img, svg {
+img,
+svg {
   display: block;
   max-width: 100%;
   object-fit: cover;

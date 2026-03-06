@@ -29,9 +29,14 @@ export const FooterStyled = styled.footer`
       3px 3px 3px var(--light-blue),
       -3px -3px 3px var(--light-blue);
     transform: scale(1.2);
+    cursor: pointer;
   }
 
   .icons:is(:focus) {
     color: var(--light-grey);
+  }
+
+  body.dark-mode & {
+    color: var(--white);
   }
 `;

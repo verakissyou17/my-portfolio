@@ -106,12 +106,19 @@ export const ProjectsMainStyled = styled.main`
             transform: scaleX(1);
             transform-origin: left;
             z-index: 1;
+            cursor: pointer;
           }
         }
 
         img {
           max-width: 10rem;
           border-radius: 1rem;
+          transition: transform 0.5s ease;
+        }
+
+        img:hover {
+          transform: scale(1.2);
+          cursor: pointer;
         }
       }
 
