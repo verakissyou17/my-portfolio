@@ -8,7 +8,7 @@ export const HeaderStyled = styled.header`
   z-index: 10;
   display: flex;
   align-items: center;
-  gap: 2rem;
+  gap: 1rem;
   padding: 2rem;
   
   .hamburger {
@@ -64,7 +64,7 @@ export const HeaderStyled = styled.header`
       text-transform: uppercase;
       display: flex;
       align-items: center;
-      gap: 1rem;
+      gap: 0.5rem;
 
       & li a {
         background: linear-gradient(
