@@ -3,7 +3,7 @@
   --light-pink-alpha: hsla(314, 32%, 92%, 0.748);
   --white: hsl(0, 0%, 100%);
   --black: hsl(0, 0%, 0%);
-  --dark-lilac: #a07297;
+  --dark-lilac: hsl(312, 19%, 54%);
   --dark-gray: hsl(0, 0%, 29%);
   --light-grey: hsl(0, 0%, 63%);
   --pink: hsl(338, 70%, 55%);
@@ -31,9 +31,14 @@ body {
   justify-content: center;
   min-height: 100vh;
   font-family: "Mooli", sans-serif;
-  background: linear-gradient(180deg, #f7f1f9 0%, #eef1ff 40%, #ffffff 100%);
+  background: linear-gradient(
+    90deg,
+    hsla(0, 0%, 100%, 1) 0%,
+    hsla(314, 32%, 92%, 1) 41%,
+    hsla(0, 0%, 100%, 1) 68%,
+    hsla(314, 32%, 92%, 1) 100%
+  );
 }
-
 
 body.dark-mode {
   background: linear-gradient(180deg, #0f0f14 0%, #151520 40%, #0f0f14 100%);

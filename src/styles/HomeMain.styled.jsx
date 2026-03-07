@@ -49,7 +49,7 @@ export const HomeMainStyled = styled.main`
     .hero {
       width: 100%;
       min-height: 60vh;
-      border-radius: 6rem 1.2rem;
+      border-radius: 1.2rem;
       background: url("./images/programming-languages.webp");
       background-repeat: no-repeat;
       background-position: center;
@@ -68,15 +68,14 @@ export const HomeMainStyled = styled.main`
       content: "";
       position: absolute;
       inset: 2px -2px -2px 2px;
-      border-radius: 6rem 1.2rem;
+      border-radius: 1.2rem;
       transform: translate(5px, -5px);
       box-shadow:
-        2px 2px 15px var(--light-blue),
-        -2px -2px 15px var(--yellow),
-        2px -2px 15px var(--teal-dark),
-        -2px 2px 15px var(--magenta);
+        2px 2px 10px var(--light-blue),
+        -2px -2px 10px var(--teal-light),
+        2px 2px 10px var(--light-blue),
+        -2px 2px 10px var(--teal-light);
       z-index: -1;
-      filter: blur(2px);
     }
 
     .about-me__text {
