@@ -201,6 +201,7 @@ export const HomeMainStyled = styled.main`
     transform: translateX(0);
   }
 
+  // Media for devices with bigger screen
   @media (min-width: 48em) {
     .about-me {
       .title {
