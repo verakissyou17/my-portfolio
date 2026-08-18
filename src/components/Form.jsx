@@ -53,38 +53,11 @@ function Form() {
           onChange={showProject}
         >
           <option value="">Select project</option>
-          {projects.map((project, index) => {
+          {projects.map((project) => {
             return (
-              <option key={index} value={project.link}>{project.title}</option>
+              <option key={project.id} value={project.url}>{project.title}</option>
             )
           })}
-          {/* <option value="https://riviana-dolce.vercel.app/">
-            Riviana Dolce
-          </option>
-          <option value="https://verakissyou17.github.io/random-quote-app/">
-            Random Quote App
-          </option>
-          <option value="https://verakissyou17.github.io/myPlayer/">
-            My Player
-          </option>
-          <option value="https://verakissyou17.github.io/time-tracking-dashboard-main/#">
-            Time Tracking Dashboard
-          </option>
-          <option value="https://verakissyou17.github.io/age-calculator-app-main/">
-            Age Calculator App
-          </option>
-          <option value="https://verakissyou17.github.io/javascript-amazon-project-main/">
-            Amazon Project
-          </option>
-          <option value="https://verakissyou17.github.io/smoking-tracking-app/">
-            Smoking Tracking App
-          </option>
-          <option value="https://verakissyou17.github.io/mortgage-repayment-calculator-main/">
-            Mortgage Repayment Calculator
-          </option>
-          <option value="https://verakissyou17.github.io/ecommerce-product-page-main/">
-            E-commerce product page
-          </option> */}
         </select>
       </div>
       <div className="form-container">

@@ -1,4 +1,4 @@
-import { projects } from "../projects.js";
+import { projects } from "../../public/data/projects.js";
 import { ProjectsMainStyled } from "../styles/ProjectsMain.styled";
 
 function ProjectsMain() {
