@@ -41,7 +41,7 @@ function Footer({isHome}) {
           <FontAwesomeIcon icon={faLinkedin} className="icon" />
         </Link>
       </nav>
-      <div>.Made with love by <Link id={isHome ? "home" : "projects" } to={"https://github.com/verakissyou17"} target="_blank">Vera 💞</Link> @Copyright{year}</div>
+      <div>Made with 💞 by <Link id={isHome ? "home" : "projects" } to={"https://github.com/verakissyou17"} target="_blank">Vera.</Link> &copy; Copyright {year}</div>
     </FooterStyled>
   );
 }
