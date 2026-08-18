@@ -1,6 +1,7 @@
 import { FormStyled } from "../styles/Form.styled";
 import { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
+import { projects } from "../../public/data/projects";
 
 function Form() {
   const formRef = useRef();
@@ -52,7 +53,12 @@ function Form() {
           onChange={showProject}
         >
           <option value="">Select project</option>
-          <option value="https://riviana-dolce.vercel.app/">
+          {projects.map((project, index) => {
+            return (
+              <option key={index} value={project.link}>{project.title}</option>
+            )
+          })}
+          {/* <option value="https://riviana-dolce.vercel.app/">
             Riviana Dolce
           </option>
           <option value="https://verakissyou17.github.io/random-quote-app/">
@@ -78,7 +84,7 @@ function Form() {
           </option>
           <option value="https://verakissyou17.github.io/ecommerce-product-page-main/">
             E-commerce product page
-          </option>
+          </option> */}
         </select>
       </div>
       <div className="form-container">
