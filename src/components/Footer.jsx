@@ -32,7 +32,7 @@ function Footer({isHome}) {
           <FontAwesomeIcon icon={faGithub} className="icon" />
         </Link>
         <Link
-          to="https://www.linkedin.com/in/verakissyou17/"
+          to="https://www.linkedin.com/in/veronica-ciuc%C4%83-467003278/"
           target="_blank"
           rel="noopener noreferrer"
           aria-label="LinkedIn"
